@@ -25,8 +25,7 @@ trigger.Id = "LogonTriggerId"
 colActions = taskDef.Actions
 action = colActions.Create(TASK_ACTION_EXEC)
 action.ID = "Mojiboard"
-action.Path = r"cmd.exe"
-action.Arguments =f'/c start "" "{os.getcwd()}\\Mojiboard.exe"'
+action.Path =f"{os.getcwd()}\\Mojiboard.exe"
 
 
 info = taskDef.RegistrationInfo
@@ -34,6 +33,7 @@ info.Author = "Mojiboard"
 info.Description = "Run Mojiboard.exe when the current user logs on"
 
 settings = taskDef.Settings
+settings.DisallowStartIfOnBatteries = False
 settings.Hidden = False
 
 try:
