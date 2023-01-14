@@ -33,7 +33,7 @@ StringFileInfo(
     StringStruct(u'InternalName', u''),
     StringStruct(u'LegalCopyright', u''),
     StringStruct(u'OriginalFilename', u''),
-    StringStruct(u'ProductName', u'Mojiclip.exe'),
+    StringStruct(u'ProductName', u'Mojiboard.exe'),
     StringStruct(u'ProductVersion', u'1.0.0.0')])
   ]),
 VarFileInfo([VarStruct(u'Translation', [1033, 1200])])
