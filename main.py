@@ -30,11 +30,16 @@ def write_emoji(emoji):
 def add_emoji():
     if new_emoji.get() == "":
         return
+    with open("./Emojis.txt", "r", encoding="utf-8") as F:
+        if new_emoji.get() in F.read():
+            messagebox.showinfo("중복!", f"{new_emoji.get()}가 이미 존재합니다")
+            return
     with open("./Emojis.txt", "a", encoding="utf-8") as F:
         F.writelines("\n" + new_emoji.get())
         messagebox.showinfo("성공!", f"{new_emoji.get()}을 추가했습니다")
         Button(frame_e, text=new_emoji.get(), command=lambda: write_emoji(new_emoji.get()), height=1).pack(
             side="left")
+        new_emoji.set("")
 
 
 def set_focus(i: bool):
@@ -52,11 +57,13 @@ window.wm_attributes("-toolwindow", 1)
 window.title("이모지")
 window.bind("<FocusIn>", lambda x: set_focus(True))
 window.bind("<FocusOut>", lambda x: set_focus(False))
+window.bind("<Return>", lambda x: add_emoji())
+window.geometry("-30-40")
 
 frame_add = Frame(window)
 new_emoji = StringVar()
 Entry(frame_add, textvariable=new_emoji).pack(side="left")
-Button(frame_add, text="이모지 추가 하기", command=add_emoji).pack(side="left")
+Button(frame_add, text="이모지 추가하기", command=add_emoji).pack(side="left")
 
 frame_e = Frame(window)
 style = ttk.Style()
