@@ -29,12 +29,12 @@ StringFileInfo(
     u'040904B0',
     [StringStruct(u'CompanyName', u'Herb'),
     StringStruct(u'FileDescription', u'손쉽게 자주쓰는 이모지를 저장하고 써보세요'),
-    StringStruct(u'FileVersion', u'1.0.0.0'),
+    StringStruct(u'FileVersion', u'1.1.0.0'),
     StringStruct(u'InternalName', u''),
     StringStruct(u'LegalCopyright', u''),
     StringStruct(u'OriginalFilename', u''),
     StringStruct(u'ProductName', u'Mojiboard.exe'),
-    StringStruct(u'ProductVersion', u'1.0.0.0')])
+    StringStruct(u'ProductVersion', u'1.1.0.0')])
   ]),
 VarFileInfo([VarStruct(u'Translation', [1033, 1200])])
   ]
