@@ -1,13 +1,14 @@
+import ctypes.wintypes
 import os.path
 import subprocess
 from os.path import exists
-from time import sleep
 from threading import Thread
-from pyautogui import hotkey
+from time import sleep
 from tkinter import Tk, Button, ttk, messagebox, Frame, StringVar, Entry
-from win32api import GetKeyState
+
+from pyautogui import hotkey
 from pyperclip import copy
-import ctypes.wintypes
+from win32api import GetKeyState
 
 
 class Hook(Thread):
@@ -70,10 +71,13 @@ window.bind("<FocusIn>", lambda x: set_focus(True))
 window.bind("<FocusOut>", lambda x: set_focus(False))
 window.bind("<Return>", lambda x: add_emoji())
 
-window.geometry("-30-40")
+window.geometry("-0-40")
 
 frame_add = Frame(window)
 new_emoji = StringVar()
+Button(frame_add, text="새로고침", command=lambda: list(
+    map(lambda i: Button(frame_e, text=i, command=lambda: write_emoji(i), height=1).pack(side="left"),
+        open(path, 'r', encoding="utf-8").readlines()))).pack(side="left")
 Entry(frame_add, textvariable=new_emoji).pack(side="left")
 Button(frame_add, text="이모지 추가하기", command=add_emoji).pack(side="left")
 Button(frame_add, text="이모지 파일 열기", command=openfile).pack(side="left")
