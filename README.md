@@ -7,7 +7,7 @@
 # 사용방법
 위 링크를 통해 폴더를 통째로 다운받은 뒤 압축을 해제하여 사용해 주세요\
 exe 파일 실행시 나타나는 window defender 경고창은 Pyinstaller를 이용해 만든 대부분의 exe 파일에서 일어나는 일이므로 보안경고를 해제한 후 실행해 주세요\
-폴더 내에 있는 AddStarter.exe를 실행하여 시작프로그램으로 지정할 수 있습니다\
+폴더 내에 있는 AddStarter.exe를 실행하여 시작프로그램으로 지정할 수 있습니다 \
 이모지들은 모두 "문서" 폴더의 Emoji.txt에 존재합니다
 
 
@@ -18,4 +18,4 @@ exe 파일 실행시 나타나는 window defender 경고창은 Pyinstaller를 �
 
 # 제거시 유의사항
 "문서"폴더에 있는 Emoji.txt를 삭제해 주세요\
-AddStartr.exe를 사용한 경우 폴더 제거 후 윈도우 검색창에 "작업 스케줄러"를 눌러 작업 스케줄러를 연 뒤 "Mojiboard"이름으로 되어있는 작업을 삭제해 주세요
+AddStartr.exe를 사용한 경우 폴더 제거 후 "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup" 디랙토리의 바로가기를 지워주세요
